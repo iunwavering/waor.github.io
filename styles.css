@@ -1,64 +1,53 @@
 body {
-    margin: auto;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    overflow: auto;
-    background: linear-gradient(315deg, rgb(24, 8, 39) 10%, rgb(104, 14, 14) 68%, rgb(26, 10, 36) 98%);
-    animation: gradient 12s ease infinite;
-    background-size: 400% 400%;
-    background-attachment: fixed;
-    justify-content: center;
-    align-items: center;
-}
-@keyframes gradient {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.wave {
-    background: rgba(255, 255, 255, 0.123);
-    border-radius: 1000% 1000% 0 0;
+/* Contenedor de fondos */
+.fondo {
     position: fixed;
-    width: 200%;
-    height: 12em;
-    animation: wave 7s -2s linear infinite;
-    transform: translate3d(0, 0, 0);
-    opacity: 0.2;
-    bottom: 0;
-    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
+
+    /* 🔥 capas: degradado + imagen */
+    background: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(73, 223, 186, 0.192),
+        rgba(0, 0, 0, 0.63)
+    ),
+    url("https://xatimg.com/image/QUIqskXTraui.jpg");
+
+    background-size: 600% 600%, cover;
+    background-position: center;
+    
+    animation: moverDegradado 10s ease infinite;
 }
 
-.wave:nth-of-type(2) {
-    bottom: -1.25em;
-    animation: wave 18s linear reverse infinite;
-    opacity: 0.3;
+/* Animación del degradado */
+@keyframes moverDegradado {
+    0% { background-position: 0% 50%, center; }
+    50% { background-position: 100% 50%, center; }
+    100% { background-position: 0% 50%, center; }
 }
 
-.wave:nth-of-type(3) {
-    bottom: -2.5em;
-    animation: wave 20s -1s reverse infinite;
-    opacity: 0.4;
-}
-
-@font-face {
-    font-family: 'Blowbrush';
-    src: url(/Fuentes/blowbrush.ttf);
-    font-weight: lighter;
-    font-style: normal;
+/* Contenido */
+.contenido {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 40%;
 }
 
 .split-text-container {
-    font-family: 'Blowbrush';
-  font-weight: normal;
+font-family: "Exile", system-ui;
+  font-weight: 400;
+  font-style: normal;
   justify-content: center;
-  color: rgb(255, 255, 255);
+  color: rgb(212, 212, 212);
   font-size: 140px;
   text-align: center;
     display: flex;
@@ -66,6 +55,7 @@ body {
     overflow: hidden;
     justify-content: center;
     text-align: center;
+    margin-bottom: 0;
 }
 
 .text-part {
@@ -146,12 +136,15 @@ width: 300px;
 }
 
 h2{
-    font-family: "Poiret One", sans-serif;
+    font-family: "Protest Revolution", sans-serif;
   font-weight: 400;
   font-style: normal;
     font-size: 25px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     justify-content: center;
+    margin-bottom: 0;
+    margin: 0;
+    margin-top: 0;
 }
 .tracking-in-contract {
 	-webkit-animation: tracking-in-contract 5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -185,5 +178,19 @@ h2{
     opacity: 1;
   }
 }
-
-
+.neon {
+    color: #ffffff;
+    text-shadow:
+        0 0 2px rgb(54, 54, 54),
+        0 0 3px rgb(63, 63, 63),
+        0 0 8px rgb(29, 29, 29),
+        0 0 10px rgb(29, 29, 29);
+}
+.neon1 {
+    color: #ffffff;
+    text-shadow:
+        0 0 2px rgba(100, 100, 100, 0.685),
+        0 0 3px rgb(97, 97, 97),
+        0 0 8px rgba(63, 63, 63, 0.671),
+        0 0 10px rgb(68, 68, 68);
+}
