@@ -13,12 +13,12 @@ body {
 
     /* 🔥 capas: degradado + imagen */
     background: linear-gradient(
-        270deg,
-        rgba(0, 0, 0, 0.4),
-        rgba(73, 223, 186, 0.192),
-        rgba(0, 0, 0, 0.63)
+        250deg,
+        rgba(0, 0, 0, 0.658),
+        rgba(38, 8, 94, 0.397),
+        rgba(0, 0, 0, 0.452)
     ),
-    url("https://xatimg.com/image/QUIqskXTraui.jpg");
+    url("https://xatimg.com/image/Hzp1jGp5LO3F.jpg");
 
     background-size: 600% 600%, cover;
     background-position: center;
@@ -140,7 +140,7 @@ h2{
   font-weight: 400;
   font-style: normal;
     font-size: 25px;
-    color: rgb(0, 0, 0);
+    color: rgb(114, 73, 153);
     justify-content: center;
     margin-bottom: 0;
     margin: 0;
@@ -177,20 +177,4 @@ h2{
     letter-spacing: normal;
     opacity: 1;
   }
-}
-.neon {
-    color: #ffffff;
-    text-shadow:
-        0 0 2px rgb(54, 54, 54),
-        0 0 3px rgb(63, 63, 63),
-        0 0 8px rgb(29, 29, 29),
-        0 0 10px rgb(29, 29, 29);
-}
-.neon1 {
-    color: #ffffff;
-    text-shadow:
-        0 0 2px rgba(100, 100, 100, 0.685),
-        0 0 3px rgb(97, 97, 97),
-        0 0 8px rgba(63, 63, 63, 0.671),
-        0 0 10px rgb(68, 68, 68);
 }
