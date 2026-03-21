@@ -1,180 +1,274 @@
-body {
-    margin: 0;
-    height: 100vh;
-    overflow: hidden;
+:root{
+
+--color1:#000000;
+--color2:#3b1763;
+--color3:#6847B5;
+--color4:#4e2a86;
+
 }
 
-/* Contenedor de fondos */
-.fondo {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
 
-    /* 🔥 capas: degradado + imagen */
-    background: linear-gradient(
-        250deg,
-        rgba(0, 0, 0, 0.658),
-        rgba(38, 8, 94, 0.397),
-        rgba(0, 0, 0, 0.452)
-    ),
-    url("https://xatimg.com/image/Hzp1jGp5LO3F.jpg");
+/* ===== CONFIGURACION GENERAL ===== */
 
-    background-size: 600% 600%, cover;
-    background-position: center;
-    
-    animation: moverDegradado 10s ease infinite;
-}
-
-/* Animación del degradado */
-@keyframes moverDegradado {
-    0% { background-position: 0% 50%, center; }
-    50% { background-position: 100% 50%, center; }
-    100% { background-position: 0% 50%, center; }
-}
-
-/* Contenido */
-.contenido {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    top: 40%;
-}
-
-.split-text-container {
-font-family: "Exile", system-ui;
+body{
+margin:0;
+background:linear-gradient(180deg,var(--color1),var(--color2));
+font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal;
-  justify-content: center;
-  color: rgb(212, 212, 212);
-  font-size: 140px;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+
+.container{
+width:720px;
+background:linear-gradient(180deg,#3e1c66,#5d3aa0);
+border-radius:30px;
+padding-bottom:20px;
+position:relative;
+overflow:hidden;
+}
+
+
+
+/* ===== BANNER SUPERIOR ===== */
+
+.banner{
+
+height:180px;
+
+/* CAMBIAR IMAGEN DEL BANNER */
+background-image:url("https://xatimg.com/image/IrC7vPN6Doce.jpg");
+
+background-size:cover;
+background-position:center;
+border-radius:20px 20px 0 0;
+position:relative;
+
+}
+
+
+/* TEXTO DEL BANNER */
+
+.title{
+ font-family: "Exile", system-ui;
+  font-weight: 400;
+  font-style: normal;
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+color:white;
+font-size:80px;
+text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.658);
+}
+
+
+
+/* ===== FOTO DE PERFIL ===== */
+
+.profile-container{
+
+position:absolute;
+top:120px;
+left:40px;
+
+}
+
+.profile-img{
+
+width:140px;
+height:140px;
+border-radius:50%;
+border:6px solid #2a104a;
+object-fit:cover;
+
+}
+
+
+/* BOTON PEQUEÑO */
+
+.mini-btn{
+
+width:35px;
+height:35px;
+background:#5b3ba1;
+border-radius:50%;
+position:absolute;
+bottom:0;
+right:0;
+border:4px solid #2a104a;
+
+}
+
+
+
+/* ===== BOTONES DERECHA ===== */
+
+.buttons{
+
+position:absolute;
+top:200px;
+right:70px;
+display:flex;
+
+}
+
+.buttons div{
+
+width:140px;
+height:43px;
+background:#6a4bb3;
+border-radius:10px;
+  justify-content:center;
+ align-items:center;
+ font-size: 27px;
+  
+}
+.subti{
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+  font-size: 15px;
+  justify-content:center;
+ align-items:center;
+ color: aliceblue;
   text-align: center;
-    display: flex;
-    text-transform: uppercase;
-    overflow: hidden;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 0;
+  display:flex;
 }
 
-.text-part {
-    display: inline-block;
-    position: relative;
-    transform: translateX(0);
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-    margin-top: 0;
+
+
+/* ===== TARJETA ===== */
+
+.card{
+
+margin-top:120px;
+padding:30px;
+background:rgba(255,255,255,0.05);
+margin-left:30px;
+margin-right:30px;
+border-radius:15px;
+
 }
 
-.text-part.left {
-    transform: translateX(-200%);
-    animation-name: slide-in-left;
-    margin: 0;
+
+/* INFO SUPERIOR */
+
+.info{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
 }
 
-.text-part.right {
-    transform: translateX(200%);
-    animation-name: slide-in-right;
-    margin: 0;
+
+/* LINEAS DE TEXTO */
+
+.line{
+
+width:200px;
+height:25px;
+background:#6a4bb3;
+border-radius:10px;
+margin-bottom: 8px;
+  
+   font-size: 17px;
+   display:flex;
+    justify-content:center;
+    align-items:center;
+  color: white;
 }
 
-@keyframes slide-in-left {
-    0% {
-        transform: translateX(-200%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+
+
+.small{
+
+width:120px;
+height:15px;
+
 }
 
-@keyframes slide-in-right {
-    0% {
-        transform: translateX(200%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-img{
-margin-top: 90px;
-width: 300px;
+
+
+/* COLORES */
+
+.colors{
+    
+display:flex;
+
 }
 
-@keyframes wave {
-    2% {
-        transform: translateX(1);
-    }
+.colors div{
 
-    25% {
-        transform: translateX(-25%);
-    }
+padding:12px 18px;
+background:#3d1d6a;
+color:white;
+border-radius:10px 0 0 10px;
 
-    50% {
-        transform: translateX(-50%);
-    }
-
-    75% {
-        transform: translateX(-25%);
-    }
-
-    100% {
-        transform: translateX(1);
-    }
-}
-@keyframes fanimado{
-    0%{
-        background-position: 0% 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0% 50%;
-    }
 }
 
-h2{
-    font-family: "Protest Revolution", sans-serif;
-  font-weight: 400;
+.colors div:last-child{
+
+background:#6a4bb3;
+border-radius:0 10px 10px 0;
+
+}
+
+
+/* LINEA */
+
+hr{
+
+border:none;
+height:1px;
+background:#7b5bc4;
+margin:25px 0;
+
+}
+
+
+
+/* CAJA GRANDE */
+
+.big-box{
+
+height:120px;
+background:rgba(255,255,255,0.08);
+border-radius:12px;
+justify-content:center;
+align-items:center;
+  
+}
+
+.titulo1{
+    font-family: "Poppins", sans-serif;
+  font-weight: 600;
   font-style: normal;
-    font-size: 25px;
-    color: rgb(114, 73, 153);
-    justify-content: center;
-    margin-bottom: 0;
-    margin: 0;
-    margin-top: 0;
+  font-size: 30px;
+   display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#2e0b42;
+  margin-top:2px;
+  margin-bottom: 1px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.678);
 }
-.tracking-in-contract {
-	-webkit-animation: tracking-in-contract 5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-contract 5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+.subtitulo{
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 14px;
+  color: aliceblue;
+  gap: 60px;
+  margin-top: 3px;
+  text-align:center;
+  text-shadow: 2px 2px 5px rgb(41, 41, 41);
 }
-
-@-webkit-keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-  }
-}
-
-@keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-  }
-}
+  
