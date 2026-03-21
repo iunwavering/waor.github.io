@@ -190,7 +190,7 @@ margin-bottom: 8px;
 
 .small{
 
-width:120px;
+width:110px;
 height:15px;
 
 }
@@ -271,4 +271,9 @@ align-items:center;
   text-align:center;
   text-shadow: 2px 2px 5px rgb(41, 41, 41);
 }
-  
+ .icono-corazon{
+    text-decoration: none; /* quita subrayado */
+    font-size: 15px;
+    color: #ff4d6d;
+    cursor: pointer;
+}
